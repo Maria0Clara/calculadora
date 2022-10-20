@@ -1,49 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt--br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
-
-
+    <link rel="stylesheet" href="style.css">
+    <script src="calculadora.js"></script>
 </head>
 <body>
-    
-<div class="main">
-
-<form action="" name="Calculadora">
-<input type="text" class="text maincolor" name=" text1" disabled>
-<input type="text" class="text maincolor" name="text12" value="C" onclick="location.reload()"> <br>
-
-<input type="button" class="num maincolor" name="btn9" value="9" onclick="displaynum(btn9.value)">
-<input type="button" class="num maincolor" name="btn8" value="8" onclick="displaynum(btn8.value)"> 
-<input type="button" class="num maincolor" name="btn7" value="7" onclick="displaynum(btn7.value)">
-<input type="button" class="num blue" name="addbtn" value="+" onclick="displaynum(addbtn.value)"> <br>
-
-<input type="button" class="num maincolor" name="btn6" value="6" onclick="displaynum(btn6.value)">
-<input type="button" class="num maincolor" name="btn5" value="5" onclick="displaynum(btn5.value)"> 
-<input type="button" class="num maincolor" name="btn4" value="4" onclick="displaynum(btn4.value)">
-<input type="button" class="num pin" name="subbtn" value="-" onclick="displaynum(subbtn.value)"> <br>
-
-<input type="button" class="num maincolor" name="btn3" value="3" onclick="displaynum(btn3.value)">
-<input type="button" class="num maincolor" name="btn2" value="2" onclick="displaynum(btn2.value)"> 
-<input type="button" class="num maincolor" name="btn1" value="1" onclick="displaynum(btn1.value)">
-<input type="button" class="num gre" name="mulbtn" value="*" onclick="displaynum(mulbtn.value)"> <br>
-
-<input type="button" class="num maincolor" name="btn3" value="3" onclick="displaynum(btn3.value)">
-<input type="button" class="num maincolor" name="btn2" value="2" onclick="displaynum(btn2.value)"> 
-<input type="button" class="num maincolor" name="btn1" value="1" onclick="displaynum(btn1.value)">
-<input type="button" class="num gre" name="mulbtn" value="*" onclick="displaynum(mulbtn.value)"> <br>
-
-
-
-
-
-
-
-</div>
-
+    <div class="fundo">
+        <h1>Seu Nome</h1>
+        <div class="calculadora">
+            <h2>Calculadora</i></h2>
+            <p id="resultado"></p>
+                <table>                 
+                    <tr>
+                        <td><button class="botao" onclick="clean()">C</td>
+                        <td><button class="botao" onclick="back()"><</td>
+                        <td><button class="botao" onclick="insert('/')">/</button></td>
+                        <td><button class="botao" onclick="insert('*')">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('7')">7</button></td>
+                        <td><button class="botao" onclick="insert('8')">8</button></td>
+                        <td><button class="botao" onclick="insert('9')">9</button></td>
+                        <td><button class="botao" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('4')">4</button></td>
+                        <td><button class="botao" onclick="insert('5')">5</button></td>
+                        <td><button class="botao" onclick="insert('6')">6</button></td>
+                        <td><button class="botao" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('1')">1</button></td>
+                        <td><button class="botao" onclick="insert('2')">2</button></td>
+                        <td><button class="botao" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+                        <td><button class="botao" onclick="insert('.')">.</button></td>
+                    </tr>
+                </table>
+        </div>
+    </div>
 </body>
 </html>
